@@ -1,0 +1,242 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.text-align{
+    text-align: center;
+}
+body{
+    background: repeating-linear-gradient(180deg, black,black);
+}
+a{
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.navbar{
+    background: linear-gradient(90deg,black, darkred, black);
+    position: sticky;
+    width: 100%;
+    padding: .8% 0%;
+    text-align: center;
+    font-family: sans-serif;
+}
+.navbar a{
+/*    text-decoration: none;*/
+    margin: 1%;
+    padding: 8px 5px;
+    color: ghostwhite;
+    text-transform: uppercase;
+/*
+    border-bottom: 3px solid ghostwhite;
+    border-top: 3px solid ghostwhite;
+*/
+}
+.navbar a:hover{
+    color: white;
+    transition: .6s;
+    background: linear-gradient(90deg, darkred, black, darkred);
+    border: 2px solid ghostwhite;
+    
+}
+.navbar .sign-up{
+    float: right;
+    margin-right: 1%;
+}
+.navbar .logo{
+    margin-left: 1%;
+    float: left;
+    text-transform: uppercase;
+    box-shadow: 20px 5px grey;
+    color: black;
+    background: linear-gradient(180deg, orange, white, green);
+}
+.navbar .logo h4{
+        padding: 0px 6px 2px 5px;
+}
+
+.intro{
+    text-align: center;
+    line-height: 30px;
+    background: linear-gradient(90deg, black, darkred, black);
+    height: 400px;
+}
+.intro .profile-picture{
+    border: 2px solid grey;
+    margin-top: 10px;
+    border-radius: 50%;
+    text-align: center;
+    box-shadow: 0px 7px 21px 1px #000;
+    width: 200px;
+    height: 200px;
+    animation-name: bounce;/*animation */
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+/*    animation-timing-function: ease;*/
+}
+/*animation for glowing profile-picture*/
+@keyframes bounce{
+    0%{
+        opacity: 1;   
+    }
+/*
+    10%{
+        opacity: 0.9;
+        left:70px;
+    } 
+    20%{
+        opacity: 0.9.5;
+        left:50px;
+    } 
+    30%{
+        opacity: 0.8;
+        left:30px;
+    } 
+    40%{
+        opacity: 0.8.5;
+        left:15;
+    }
+*/
+    50%{
+        opacity: 0.7;
+    }
+/*
+    60%{
+        opacity: 0.8.5;
+    }
+    70%{
+        opacity: 0.8;
+    }
+    80%{
+        opacity: 0.9.5;
+    }
+    90%{
+        opacity: 0.9;
+    }
+*/
+    100%{
+        opacity: 1;
+    }
+}
+.intro .profile-picture:hover{
+    transform: scale(1.07);
+    transition: 1s;
+        
+}
+.intro h3{
+    padding: 5px 0px 5px 0px;
+    font-size: 20px;
+}
+.intro h3:hover{
+    padding: 5px 0px 5px 0px;
+    font-size: 24px;
+/*    color: whitesmoke;*/
+    animation-name: change-color;
+    animation-fill-mode: both;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+    cursor:pointer;
+}
+@keyframes change-color{
+    0%{
+        color: ghostwhite;
+    }
+    50%{
+        color: black;
+    }
+    100%{
+        color: ghostwhite;
+    }
+}
+
+.portfolio{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 20% 60% 20%; 
+}
+.portfolio .content-1{
+/*    border: 2px solid white;*/
+/*    background:wheat;*/
+    padding-top: 3px;
+    color:antiquewhite;
+    background: repeating-linear-gradient(180deg, black, darkred,black);
+}
+/*.portfolio .content-1 .head{
+
+    background:linear-gradient(180deg, black, black); 
+}*/
+.portfolio .content-2{
+/*    border: 2px solid white;*/
+/*    background: wheat ;*/
+    padding-top: 3px;
+    color:antiquewhite;
+    background: repeating-linear-gradient(180deg, black, darkred,black);
+    
+}
+/*.portfolio .content-2 .head{
+
+    background:linear-gradient(180deg, black, black); 
+}*/
+.portfolio .projects{
+    border-radius: 4%;
+    color: aliceblue;
+    background: repeating-linear-gradient(180deg,  black, darkred);
+    padding-top: 3px;
+}
+.portfolio .projects a img{
+    margin: 10px;
+/*    padding-top: 10px;*/
+}
+.portfolio .projects a img:hover{
+    transform: scale(1.03);
+}
+.portfolio .projects .head{
+    border-radius: 4%;
+    background:linear-gradient(180deg, black, darkred, black); 
+}
+
+.footer{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    background: linear-gradient(180deg, black, darkred, black);
+    padding-bottom: 15px;
+    
+}
+.footer .links{
+    display: grid;
+    grid-template-rows: 20% 20% 20%;
+    justify-self: center;
+    padding-top: 10px;
+}
+.footer a{
+    font-size: 18px
+}
+.footer a:hover{
+    font-size: 20px
+}
+.footer .contact{
+    padding-top: 10px;
+}
+.footer .contact .message,#message-text{
+    padding: 10px 0px 10px 0px;
+}
+form input, textarea{
+    padding: 5px;
+    border-radius: 5px;
+    width: 240px;
+}
+form{
+    width: 250px;
+    margin: 0 auto;
+}
+form input[type="submit"]{
+    width: 70%;
+    margin: 0 auto;
+}
+.submit-button{
+    margin: 20px 0;
+    text-transform: uppercase;
+}
